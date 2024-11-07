@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: rgb(53,107,91);
+            background: linear-gradient(90deg, rgba(53,107,91,1) 0%, rgba(121,9,96,1) 0%, rgba(0,212,255,1) 100%);
+        }
+        .container {
+            background-color: beige;
+            width: 450px;
+            height: 350px;
+            margin-top: 150px;
+            border-radius: 10px;
+            box-shadow: 0 1px 10px rgba(9, 9, 9, 0.932);
+            padding: 20px; 
+        }
+        .h1{
+            margin-top: 20px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 70%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 2px solid #d0abc7;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #3e0e56;
+            outline: none;
+        }
+
+        label {
+            font-size: 18px; 
+            color: #0f0e0e; 
+            display: block; 
+            font-weight: bold; 
+        }
+
+        button {
+            background-color: rgb(53,107,91);
+            background: linear-gradient(90deg, rgba(53,107,91,1) 0%, rgba(121,9,96,1) 0%, rgba(0,212,255,1) 100%);; /* Background color */
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            transition: background-color 0.3s, transform 0.2s; 
+        }
+        button:hover {
+            background-color: #0056b3; 
+            transform: scale(1.05); 
+        }
+
+        button:focus {
+            outline: none; 
+            box-shadow: 0 0 5px rgba(239, 51, 192, 0.5); 
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h1>LOGIN</h1><br>
+            <form id="loginForm">
+                <label for="username">UserName</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </center>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

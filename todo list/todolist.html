@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+       body {
+    background-color: rgb(53,107,91);
+    background: linear-gradient(90deg, rgba(53,107,91,1) 0%, rgba(121,9,96,1) 0%, rgba(0,212,255,1) 100%);
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    margin: 0; 
+}
+
+        nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 9px;
+    transition: all 0.4s ease;
+    background-color: rgb(53,107,91);
+    background: linear-gradient(90deg, rgba(53,107,91,1) 0%, rgba(121,9,96,1) 0%, rgba(0,212,255,1) 100%);
+    box-shadow: 0 1px 10px rgba(9, 9, 9, 0.932);
+    z-index: 10; /* Ensure navbar stays on top */
+}
+
+        nav.sticky {
+            padding: 15px 20px;
+            background: #f7f7f9;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .nav-content {
+            height: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .logo a {
+            font-weight: 500;
+            font-size: 45px;
+            color: #f7f7f9;
+            align-self: auto;
+        }
+
+        nav.sticky .logo a {
+            color: #f7f7f9;
+        }
+
+        .nav-content .nav-links {
+            display: flex;
+        }
+
+        .nav-content .nav-links li {
+            list-style: none;
+            margin: 0 8px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #f7f7f9;
+            font-size: 25px;
+            font-weight: 700;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ec52ac;
+        }
+
+        nav.sticky .nav-links li a {
+            color: #ffffffd3;
+            transition: all 0.4s ease;
+        }
+
+        nav.sticky .nav-links li a:hover {
+            color: #0E2431;
+        }
+
+        .todo {
+    background-color: rgba(255, 255, 255, 0.6); 
+    padding: 20px;
+    width: 80%; 
+    max-width: 800px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-align: left;
+    backdrop-filter: blur(10px); 
+    margin-top: 100px; 
+}
+
+        h1 {
+            color: #f7f7f9;
+            font-size: 35px;
+        }
+
+        .head1 {
+            color: #f7f7f9;
+            font-size: 2em;
+        }
+
+        .todo-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .todo-list li {
+            background: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        @media (max-width: 600px) {
+            .todo {
+                width: 90%;
+            }
+
+            .nav-content .nav-links li a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>My Tasks</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="login.html">Home</a></li>
+                    <li><a href="todolist.html">ToDo List</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="todo">
+        <h1>Daily Tasks(To-Do List)</h1>
+        <div class="container">
+            <h1 class="head1">Today's Tasks</h1>
+            <ul id="todolist" class="todo-list"></ul>
+        </div>
+        <script src="todo.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </div>
+</body>
+</html>
